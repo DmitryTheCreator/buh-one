@@ -1,0 +1,210 @@
+@import url("base.css");
+
+.carousel__container{
+    position: relative;
+    padding-top: 110px;
+    width: 100vw;
+    height: 780px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel__item{
+    display: none;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.carousel__item.active{
+    display: block;
+}
+
+.carousel__image-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.carousel__image-container::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.carousel__image{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.container{
+  position: relative;  
+}
+
+.carousel__content{
+    position: relative;
+    bottom: 510px;
+    text-align: left;
+}
+
+.carousel__text{
+    font-size: 48px;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;  
+    color: #fff;  
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.carousel__text.long-text{
+    max-width: 60%; 
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 1.5;
+}
+
+.carousel__button{
+    margin-top: 60px;
+    width: 270px;
+    height: 60px;
+    background-color: #005FA3;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;  
+}
+.carousel__button.none{
+    display: none;
+}
+
+.carousel__bottom{
+    position: relative;
+    bottom: 120px; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.carousel__progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    gap: 40px; 
+    align-items: end;
+    justify-self: flex-start;
+}
+
+.carousel__progress-circle{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    transition: opacity 0.3s ease-in-out; 
+    opacity: 0.4;
+}
+
+.carousel__progress-circle.active{
+    opacity: 1;
+}
+
+.carousel__navigation{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-self: flex-end;
+}
+
+.carousel__nav-button{
+    width: 60px;
+    height: 60px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+.carousel__rectangle{
+    width: 100%;
+    height: 100%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    background-color: #fff;
+    border: .01px solid #000;
+}
+.carousel__rectangle img{
+    height: 20px;
+    width: auto;
+    opacity: 100%;
+}
+#rectangle-prev{
+    opacity: 40%;
+}
+#rectangle-next{
+    opacity: 60%;
+}
+
+@media (max-width:992px){
+    .carousel__container{
+        height: 600px;
+  }
+    .carousel__content{
+        bottom: 400px;
+    }
+    .carousel__text{
+        font-size: 36px;
+    }
+    .carousel__button{
+        width: 200px;
+    }
+    .carousel__bottom{
+        bottom: 50px;
+    }
+    .carousel__nav-button{
+        width: 50px;
+        height: 50px;
+    }
+}
+@media (max-width:767px){
+    .carousel__container{
+        padding-top: 50px;
+        height: 400px;
+    }
+    .carousel__content{
+        bottom: 300px;
+    }
+    .carousel__text{
+        font-size: 26px;
+    }
+    .carousel__text.long-text{
+      max-width: 100%;
+    }
+    .carousel__button{
+        width: 200px;
+        height: 40px;
+        margin-top: 30px;
+        font-size: 16px;
+    }
+    .carousel__bottom{
+        bottom: 30px;
+    }
+    .carousel__progress{
+        gap: 20px;
+    }
+    .carousel__progress-circle{
+        width: 8px;
+        height: 8px;
+    }
+    .carousel__nav-button{
+        width: 40px;
+        height: 40px;
+    }
+}
+  

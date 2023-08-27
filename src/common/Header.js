@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Burger from "../components/Burger";
+import "../styles/header.css";
 
 const Header = () => {
     return (
@@ -15,19 +16,19 @@ const Header = () => {
                     <div className="header__content">
                         <nav className="header__menu">
                             <ul className="header__info-list">
-                                <li className="first-column">
+                                <li>
                                     <img className="header__img" src="../icons/phone.svg" alt="Номер" />
                                     <div className="header__text">8 (111) 222-33-44</div>
                                 </li>
-                                <li className="first-column">
+                                <li>
                                     <img className="header__img" src="../icons/clock.svg" alt="Время" />
                                     <div className="header__text">Пн-Пт 10:00-18:00</div>
                                 </li>
-                                <li className="first-column">
+                                <li>
                                     <img className="header__img" src="../icons/mail.svg" alt="Почта" />
                                     <div className="header__text">order@buhone.ru</div>
                                 </li>
-                                <li className="first-column">
+                                <li>
                                     <img className="header__img" src="../icons/location.svg" alt="Расположение" />
                                     <div className="header__text">Невский пр. 130</div>
                                 </li>
@@ -48,8 +49,7 @@ const Header = () => {
                                 <li>
                                     <Link to="/" className="header__link">Контакты</Link>
                                 </li>
-                            </ul>
-                            
+                            </ul>                         
                         </nav>
                     </div>
                 </div>        
