@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./common/Header";
 import Carousel from "./common/Carousel";
+import Services from "./common/Services";
 
 const items = [
   {
@@ -30,6 +31,7 @@ function App() {
     <div className="App">
       <Header /> 
       <Carousel items={items} />
+      <Services history="Наши услуги" title="Мы специализируемся" />
     </div>
   );
 }

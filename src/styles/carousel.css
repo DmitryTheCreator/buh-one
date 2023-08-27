@@ -78,9 +78,14 @@
     font-size: 18px;
     font-family: 'Lato', sans-serif;
     font-weight: 400;  
+    transition: transform 0.3s ease-in-out;
 }
 .carousel__button.none{
     display: none;
+}
+.carousel__button:hover {
+    content: url('/public/imgs/services-hover.png');
+    transform: scale(1.1); 
 }
 
 .carousel__bottom{
