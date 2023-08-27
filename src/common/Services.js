@@ -10,10 +10,8 @@ const Services = ({history, title}) => {
                 <div className="services__title">{title}</div>
                 <div className="services__grid">  
                     <Link to="/" className="services__grid-cell">
-                        <div className="services__grid-cell-content">
-                            <img src="../imgs/services.png" alt="Сервисы" />
-                            <div className="services__grid-cell__title">Бухгалтерская услуга 1</div>
-                        </div>    
+                        <img src="../imgs/services.png" alt="Сервисы" />
+                        <div className="services__grid-cell__title">Бухгалтерская услуга 1</div> 
                     </Link>     
                     <Link to="/" className="services__grid-cell">
                         <img src="../imgs/services.png" alt="Сервисы" />

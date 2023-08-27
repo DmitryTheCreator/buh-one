@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./common/Header";
 import Carousel from "./common/Carousel";
 import Services from "./common/Services";
+import Info from "./common/Info";
 
 const items = [
   {
@@ -32,6 +33,7 @@ function App() {
       <Header /> 
       <Carousel items={items} />
       <Services history="Наши услуги" title="Мы специализируемся" />
+      <Info history="О нас" title="Компания" name="ИвановПром"/>
     </div>
   );
 }
