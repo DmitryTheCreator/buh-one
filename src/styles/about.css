@@ -1,0 +1,46 @@
+@import url("base.css");
+
+
+.about__container{
+    max-width: 1120px;
+    margin: 0px auto;
+    padding-bottom: 120px;
+}
+
+.about__history {
+    padding-top: 140px;
+    font-size: 24px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    color: #BDBDBD;
+}
+
+.about__title {
+    padding-top: 40px;
+    font-size: 48px;
+    font-family: 'Merriweather', serif;
+    font-weight: 900;
+    color: #333333;
+}
+
+.about__text {
+    padding-top: 60px;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #000;
+}
+
+@media (max-width:460px){
+    .about__history {
+        font-size: 18px;
+    }
+    .about__title {
+        padding-top: 40px;
+        font-size: 32px;
+    } 
+    .about__text {
+        padding-top: 60px;
+        font-size: 16px;
+    }
+}
