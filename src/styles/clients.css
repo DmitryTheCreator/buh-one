@@ -90,6 +90,13 @@
     justify-content: center; 
     align-items: center;
     background-color: #005FA3;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+.clients__nav-button:hover .clients__rectangle{
+    background-color: #1450A3;
+}
+.clients__nav-button:hover #clients__rectangle-prev{
+    opacity: 50%;
 }
 #clients__rectangle-prev{
     opacity: 40%;

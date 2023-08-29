@@ -146,6 +146,10 @@ textarea{
     color: #fff;
     font-size: 18px;
     font-weight: 400;
+    transition: background-color 0.3s ease
+}
+.contacts__button:hover {
+    background-color: #1450A3;
 }
 
 @media (max-width:1160px){ 

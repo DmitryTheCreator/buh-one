@@ -81,7 +81,7 @@
     font-size: 18px;
     font-family: 'Lato', sans-serif;
     font-weight: 400;  
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
 }
 .carousel__button.none{
     display: none;
@@ -89,6 +89,7 @@
 .carousel__button:hover {
     content: url('/public/imgs/services-hover.png');
     transform: scale(1.1); 
+    background-color: #1450A3;
 }
 
 .carousel__bottom {
@@ -143,12 +144,16 @@
     align-items: center;
     background-color: #fff;
     border: .01px solid #000;
+    transition: background-color 0.3s ease
 }
-.carousel__rectangle img{
-    height: 20px;
-    width: auto;
-    opacity: 100%;
+.carousel__nav-button:hover .carousel__rectangle{
+    background-color: #1450A3;
 }
+.carousel__nav-button:hover .carousel__rectangle svg path{
+    fill: #fff;
+}
+
+
 #rectangle-prev{
     opacity: 40%;
 }

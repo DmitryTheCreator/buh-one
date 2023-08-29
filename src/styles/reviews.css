@@ -132,6 +132,13 @@
     justify-content: center; 
     align-items: center;
     background-color: #005FA3;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+.reviews__nav-button:hover .reviews__rectangle{
+    background-color: #1450A3;
+}
+.reviews__nav-button:hover #reviews__rectangle-prev{
+    opacity: 50%;
 }
 #reviews__rectangle-prev{
     opacity: 40%;
