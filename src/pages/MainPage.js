@@ -1,10 +1,8 @@
 import React from "react";
-import Carousel from "../common/Carousel";
 import Services from "../common/Services";
 import Info from "../common/Info";
 import Clients from "../common/Clients";
 import Reviews from "../common/Reviews";
-import Contacts from "../common/Contacts";
 
 const clients_items = [
     {
@@ -98,15 +96,15 @@ const reviews_items = [
     },
 ];
 
-const Start = () => {
-  return (
-    <div className="main__content">
-      <Services history="Наши услуги" title="Мы специализируемся" />
-      <Info history="О нас" title="Компания" name="ИвановПром" />
-      <Clients items={clients_items} />
-      <Reviews items={reviews_items} />
-    </div>
-  );
+const MainPage = () => {
+    return (
+        <div className="main__content">
+            <Services history="Наши услуги" title="Мы специализируемся" />
+            <Info history="О нас" title="Компания" name="ИвановПром" />
+            <Clients items={clients_items} />
+            <Reviews items={reviews_items} />
+        </div>
+    );
 }
 
-export default Start;
+export default MainPage;

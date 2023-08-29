@@ -4,8 +4,10 @@ import Header from "./common/Header";
 import Carousel from "./common/Carousel";
 import Contacts from "./common/Contacts";
 import Footer from "./common/Footer";
-import Start from "./pages/Start";
-import About from "./pages/About";
+import MainPage from "./pages/MainPage";
+import AboutPage from "./pages/AboutPage";
+import ServicesPage from "./pages/ServicesPage";
+import ServiceItemPage from "./pages/ServiceItemPage";
 
 const carousel_items = [
     {
@@ -37,8 +39,10 @@ function App() {
             <Carousel items={carousel_items} />
             <div className="content">
                 <Routes>
-                    <Route path="/" element={<Start />} />
-                    <Route path="/about" element={<About />} />
+                    <Route path="/" element={<MainPage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/services" element={<ServicesPage />} />
+                    <Route path="/services/item" element={<ServiceItemPage />} />
                 </Routes>
             </div>
             <Contacts />
