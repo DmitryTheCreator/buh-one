@@ -6,6 +6,7 @@ import Info from "./common/Info";
 import Clients from "./common/Clients";
 import Reviews from "./common/Reviews";
 import Contacts from "./common/Contacts";
+import Footer from "./common/Footer";
 
 const carousel_items = [
   {
@@ -130,6 +131,7 @@ function App() {
       <Clients items={clients_items} />
       <Reviews items={reviews_items} />
       <Contacts />
+      <Footer />
     </div>
   );
 }
