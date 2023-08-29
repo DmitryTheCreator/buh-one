@@ -5,6 +5,7 @@ import Services from "./common/Services";
 import Info from "./common/Info";
 import Clients from "./common/Clients";
 import Reviews from "./common/Reviews";
+import Contacts from "./common/Contacts";
 
 const carousel_items = [
   {
@@ -72,7 +73,7 @@ const reviews_items = [
     text: 'Потрясающий сервис. Я влюбился с первого взгляда \
           в дизайн и структуру этого божественного творения. Мне как \
           завидному и омерзительно красивому мужчине крайне важно удобство, \
-          чем изобилует данный сайт. Разработчика этого сервиса мне не \
+          чем изобилует данный сайт. На разработчика этого сервиса мне не \
           жалко было бы и свою квартиру переписать!',
     image: '../imgs/me-4.jpg',
     name: 'Дмитрий Заморев',
@@ -128,6 +129,7 @@ function App() {
       <Info history="О нас" title="Компания" name="ИвановПром" />
       <Clients items={clients_items} />
       <Reviews items={reviews_items} />
+      <Contacts />
     </div>
   );
 }

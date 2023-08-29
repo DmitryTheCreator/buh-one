@@ -147,8 +147,11 @@
         padding-left: 10px;
         padding-right: 10px;
     }
+    .info__history{
+        font-size: 18px;
+    }
     .info__title, .info__name{
-        font-size: 36px;
+        font-size: 26px;
         font-family: 'Merriweather', serif;
         font-weight: 900;
     }
