@@ -1,8 +1,8 @@
 import "../styles/about.css";
 
-const About = () => {
+const About = ({ aboutRef }) => {
     return (
-        <div className="about__container">
+        <div className="about__container" ref={aboutRef} >
             <div className="about__history">Главная / О нас</div>
             <div className="about__title">Компания ИвановПром</div>  
             <div className="about__text">

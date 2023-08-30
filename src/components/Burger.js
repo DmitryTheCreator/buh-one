@@ -1,30 +1,8 @@
-import { useState } from "react";
+import React from "react";
 
-const Burger = () => {
-    const [burgerState, setBurgerState] = useState(false);
-    
-    const burgerClick = () => {
-        setBurgerState(burgerState => !burgerState);
-    };
-
-    let toggleClassCheck;
-    if (burgerState){
-        toggleClassCheck = 'active';
-        document.querySelectorAll('.header__menu')
-        .forEach(element => element.classList.add(toggleClassCheck));
-        document.querySelectorAll('body')
-        .forEach(element => element.classList.add('lock'));
-    }
-    else{
-        toggleClassCheck = '';
-        document.querySelectorAll('.header__menu')
-        .forEach(element => element.classList.remove('active'));
-        document.querySelectorAll('body')
-        .forEach(element => element.classList.remove('lock'));
-    }
-
-    return(
-        <div className={`header__burger ${toggleClassCheck}`} onClick={burgerClick}>
+const Burger = ({ onClick, active }) => {
+    return (
+        <div className={`header__burger ${active ? 'active' : ''}`} onClick={onClick}>
             <span></span>
         </div>
     );

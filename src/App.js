@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Route, Routes } from "react-router-dom";
 import Header from "./common/Header";
 import Carousel from "./common/Carousel";
@@ -8,6 +8,7 @@ import MainPage from "./pages/MainPage";
 import AboutPage from "./pages/AboutPage";
 import ServicesPage from "./pages/ServicesPage";
 import ServiceItemPage from "./pages/ServiceItemPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 const carousel_items = [
     {
@@ -33,19 +34,26 @@ const carousel_items = [
 ];
 
 function App() {
-    return (
+    const mainRef = useRef(null);
+    const servicesRef = useRef(null);
+    const casesRef = useRef(null);
+    const aboutRef = useRef(null);
+    const contactsRef = useRef(null);
+
+    return (      
         <div className="layout">
-            <Header /> 
-            <Carousel items={carousel_items} />
+            <ScrollToTop />
+            <Header mainRef={mainRef} servicesRef={servicesRef} casesRef={casesRef} aboutRef={aboutRef} contactsRef={contactsRef} /> 
+            <Carousel items={carousel_items} mainRef={mainRef} />
             <div className="content">
                 <Routes>
-                    <Route path="/" element={<MainPage />} />
-                    <Route path="/about" element={<AboutPage />} />
-                    <Route path="/services" element={<ServicesPage />} />
-                    <Route path="/services/item" element={<ServiceItemPage />} />
+                    <Route path="/" element={<MainPage casesRef={casesRef} />} />
+                    <Route path="/about" element={<AboutPage aboutRef={aboutRef} />} />
+                    <Route path="/services" element={<ServicesPage servicesRef={servicesRef} />} />
+                    <Route path="/service" element={<ServiceItemPage />} />
                 </Routes>
             </div>
-            <Contacts />
+            <Contacts contactsRef={contactsRef} />
             <Footer />
         </div>
     );

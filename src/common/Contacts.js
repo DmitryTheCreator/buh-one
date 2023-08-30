@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import InputMask from 'react-input-mask';
 import "../styles/contacts.css";
 
-const Contacts = () => {
+const Contacts = ({ contactsRef }) => {
     const [name, setName] = useState('');
     const [surname, setSurname] = useState('');
     const [email, setEmail] = useState('');
@@ -73,9 +73,9 @@ const Contacts = () => {
     };
 
     return (
-        <div className="contacts">
+        <div className="contacts" ref={contactsRef}>
             <div className="contacts__image">
-                <img src="../imgs/contacts.png"></img>
+                <img src="../imgs/contacts.png" alt="Контакты"></img>
             </div>
             <div className="contacts__content">
                 <div className="contacts__container">

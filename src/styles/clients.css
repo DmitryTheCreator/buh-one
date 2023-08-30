@@ -53,7 +53,7 @@
     width: 100%;
     display: flex;
     gap: 40px; 
-    align-items: end;
+    align-items: flex-end;
     justify-self: flex-start;
 }
 

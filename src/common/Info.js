@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/info.css";
 
-const Info = ({history, title, name}) => {
+const Info = ({history, title, name, casesRef}) => {
     return (
-        <div className="info">
+        <div className="info" ref={casesRef}>
             <div className="container">
                 <div className="info__columns">
                     <div className="info__left-side">

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import "../styles/carousel.css";
 
-const Carousel = ({ items }) => {
+const Carousel = ({ items, mainRef }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const goToNext = () => {
@@ -13,14 +14,16 @@ const Carousel = ({ items }) => {
     };
 
     return (
-        <div className="carousel__container">
+        <div className="carousel__container" ref={mainRef}>
             {items.map((item, index) => (
             <div key={index} className={`carousel__item ${index === currentIndex ? 'active' : ''}`}>
                 <div className="carousel__image-container">
                     <img src={item.image} alt={`Item ${index}`} className="carousel__image" />
                     <div className="carousel__content">                   
                         <div className={`carousel__text ${item.text.length > 20 ? 'long-text' : ''}`}>{item.text}</div>
-                        {item.button && <button className={`carousel__button ${item.button.length === 0 ? 'none' : ''}`}>{item.button}</button>}
+                        <Link to="/about">
+                            {item.button && <button className={`carousel__button ${item.button.length === 0 ? 'none' : ''}`}>{item.button}</button>}
+                        </Link>
                         <div className="carousel__bottom">
                             <div className="carousel__progress">
                                 {items.map((_, index) => (

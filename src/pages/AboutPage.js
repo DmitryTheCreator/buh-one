@@ -1,10 +1,10 @@
 import React from "react";
 import About from "../common/About";
 
-const AboutPage = () => {
+const AboutPage = ({ aboutRef }) => {
     return (
         <div className="about__content">
-            <About />
+            <About aboutRef={aboutRef} />
         </div>
     );
 }

@@ -18,6 +18,11 @@
     background-color: white;
     z-index: 2;
 }
+
+.menu-active {
+    overflow: hidden;
+}
+
 .header__body{
     position: relative;
     display: flex;
@@ -138,9 +143,6 @@
     }
 }
 @media (max-width:767px){
-    body.lock{
-        overflow: hidden;
-    }
     .header__body{
         height: 50px;
     }
@@ -194,6 +196,7 @@
     .header__menu.active{
         top: 0;
     }
+
     .header__info-list{
         position: absolute;
         bottom: 20px;

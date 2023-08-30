@@ -96,11 +96,11 @@ const reviews_items = [
     },
 ];
 
-const MainPage = () => {
+const MainPage = ({ casesRef }) => {
     return (
         <div className="main__content">
             <Services history="Наши услуги" title="Мы специализируемся" />
-            <Info history="О нас" title="Компания" name="ИвановПром" />
+            <Info history="О нас" title="Компания" name="ИвановПром" casesRef={casesRef} />
             <Clients items={clients_items} />
             <Reviews items={reviews_items} />
         </div>
